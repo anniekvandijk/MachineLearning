@@ -1,11 +1,11 @@
 ﻿using System;
 using MachineLearningML.Model;
 
-namespace DetectAlpaca
+namespace DetectAlpacaInImage.ConsoleApp
 {
-    class Program
+    internal class Program
     {
-        static void Main(string[] args)
+        private static void Main(string[] args)
         {
             // Create single instance of sample data from first line of dataset for model input
             ModelInput sampleData = new ModelInput()
