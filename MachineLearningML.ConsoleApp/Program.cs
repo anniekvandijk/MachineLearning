@@ -12,7 +12,7 @@ namespace MachineLearningML.ConsoleApp
             // Create single instance of sample data from first line of dataset for model input
             ModelInput sampleData = new ModelInput()
             {
-                ImageSource = @"D:\MachineLearningData\AlpacaInPicture\NoAlpaca\1200px-Jenkins_logo.svg.png",
+                ImageSource = @"D:\MachineLearningData\AlpacaInPicture\NoAlpaca\01511e02-16d0-47ca-9204-f54d53283a74.jpg",
             };
 
             // Make a single prediction on the sample data and print results
