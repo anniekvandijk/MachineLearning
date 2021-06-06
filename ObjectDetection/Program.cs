@@ -10,11 +10,10 @@ using ObjectDetection.DataStructures;
 
 namespace ObjectDetection
 {
-    class Program
+    public class Program
     {
-        static void Main(string[] args)
+        private static void Main(string[] args)
         {
-            Console.WriteLine("Hello World!");
             var assetsRelativePath = @"../../../assets";
             string assetsPath = GetAbsolutePath(assetsRelativePath);
             var modelFilePath = Path.Combine(assetsPath, "Model", "TinyYolo2_model.onnx");
@@ -28,7 +27,6 @@ namespace ObjectDetection
                 IEnumerable<ImageNetData> images = ImageNetData.ReadFromFile(imagesFolder);
                 IDataView imageDataView = mlContext.Data.LoadFromEnumerable(images);
                 var modelScorer = new OnnxModelScorer(imagesFolder, modelFilePath, mlContext);
-                // Use model to score data
                 IEnumerable<float[]> probabilities = modelScorer.Score(imageDataView);
                 YoloOutputParser parser = new YoloOutputParser();
 
